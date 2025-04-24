@@ -12,12 +12,4 @@
     {
         EmailService.SendEmail(Email, $"Dear {Name},\n\n{message}\n\n\n");
     }
-    public void Subscribe(IObservable order)
-    {
-        order.AddObserver(this);
-    }
-    public void Unsubscribe(IObservable order)
-    {
-        order.RemoveObserver(this);
-    }
 }

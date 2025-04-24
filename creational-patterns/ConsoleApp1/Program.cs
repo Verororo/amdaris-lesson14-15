@@ -11,26 +11,26 @@ Beverage cappucino = barista.Make(builder, sugar, sugar);
 Console.WriteLine(cappucino.GetDescription());
 
 
-var db = Database.GetInstance();
+//var db = Database.GetInstance();
 
-class Database
-{
-    private static Database instance;
-    private Database() { }
-    private static object obj = new Object();
+//class Database
+//{
+//    private static Database instance;
+//    private Database() { }
+//    private static object obj = new Object();
 
-    public static Database GetInstance()
-    {
-        if (instance == null)
-        {
-            lock (obj)
-            {
-                if (instance == null) 
-                { 
-                    instance = new Database(); 
-                }
-            }
-        }
-        return instance;
-    }
-}
+//    public static Database GetInstance()
+//    {
+//        if (instance == null)
+//        {
+//            lock (obj)
+//            {
+//                if (instance == null) 
+//                { 
+//                    instance = new Database(); 
+//                }
+//            }
+//        }
+//        return instance;
+//    }
+//}

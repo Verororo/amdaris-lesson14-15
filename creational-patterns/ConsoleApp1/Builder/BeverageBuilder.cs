@@ -9,6 +9,6 @@
     public abstract void AddIngridients();
     public void AddAdditionalIngridients(IComponent[] additionalComponents)
     {
-        Beverage.AdditionalIngridients = new List<IComponent>(additionalComponents);
+        Beverage.AdditionalIngridients = [.. additionalComponents];
     }
 }

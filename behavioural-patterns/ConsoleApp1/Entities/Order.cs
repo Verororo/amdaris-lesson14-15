@@ -11,18 +11,18 @@ public class Order : IObservable
         Observers = new List<IObserver>();
 
         Name = name;
-        customer.Subscribe(this);
+        Subscribe(customer);
 
         Staff responsibleStaff = StaffService.freeStaff.First();
-        responsibleStaff.Subscribe(this);
+        Subscribe(responsibleStaff);
 
         UpdateStatus("Pending");
     }
-    public void AddObserver(IObserver observer)
+    public void Subscribe(IObserver observer)
     {
         Observers.Add(observer);
     }
-    public void RemoveObserver(IObserver observer)
+    public void Unsubscribe(IObserver observer)
     {
         Observers.Remove(observer);
     }
